@@ -1,0 +1,152 @@
+/* @media (max-width: 1200px) {
+
+} */
+@media (max-width: 991px) {
+    .container {
+        max-width: 750px;
+    }
+    .promo {
+        background: url(../../img/main_bg.png) left (center/cover) no-repeat;
+        .header {
+            &__logo {
+                width: 36%;
+                margin-left: 50px;
+            }
+            &__official {
+                width: 36%;
+            }
+            &__contacts {
+                width: 28%;
+                margin-right: 50px;
+            }
+        }
+        &__wrapper {
+            margin: 90px 50px 0 0;
+        }
+    }
+    .perks {
+        padding: 60px 0 71px 0;
+        &__block {
+            max-width: 230px;
+            margin-right: 15px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+}
+@media (max-width: 767px) {
+    .container {
+        max-width: 516px;
+    }
+    .promo {
+        .header {
+            &__logo {
+                margin-left: 0px;
+            }
+            &__contacts {
+                margin-right: 0px;
+            }
+            &__phone {
+                font-size: 14px;
+            }
+            &__official {
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+        &__wrapper {
+            margin: 90px auto;
+        }
+        .button {
+            width: 88%;
+            &_main {
+                width: 300px;
+            }
+        }
+    }
+}
+@media (max-width: 575px) {
+    .container {
+        max-width: 88%;
+    }
+    .promo {
+        padding-bottom: 20px;
+        min-height: auto;
+        background: url(../../img/main_bg.png) 15% center/cover no-repeat;
+        .xs-hidden {
+            display: none;
+        }
+        .header {
+            flex-direction: column;
+            &__logo {
+                width: 251px;
+            }
+            &__contacts {
+                width: 100%;
+                align-items: flex-end;
+                margin-top: 20px;
+                .button {
+                font-size: 11px;
+                margin-top: 10px;
+                width: 144px;
+                }
+            }
+            &__phone {                
+                font-size: 15px;
+            }
+        }
+        &__wrapper {
+            margin: 40px 0 0 0;
+        }
+        &__header {        
+            text-align: right;    
+            font-size: 30px;
+            line-height: 32px;
+        }
+        &__subheader {
+            text-align: right;
+            font-size: 20px;
+            line-height: 22px;
+        }
+        &__icons {
+            width: 100%;
+            margin-top: 20px;
+        }
+        &__icon {
+            width: 33%;
+            font-size: 11px;
+        }
+        .button {
+            &_main {
+                margin: 0 auto;
+                margin-top: 20px;
+                width: 80%;
+                font-size: 14px;                
+            }
+        }
+        &__link {
+            margin-bottom: 10px;
+        }
+    }
+    .perks {
+        padding: 30px 0 30px 0;
+        &__wrapper {
+            flex-direction: column;
+            align-items:center;
+            margin-top: 25px;
+        }
+        &__block {
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+        &__img {
+            margin-bottom: 12px;
+        }
+        &__descr {
+            margin-top: 12px;
+        }
+    }
+}

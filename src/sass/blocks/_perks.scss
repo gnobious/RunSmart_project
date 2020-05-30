@@ -1,0 +1,48 @@
+.perks {
+    background-color: #f6f6f6;
+    display: flex;
+    padding: 69px 0 78px 0;
+    text-align: center;
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        margin-top: 65px;
+        justify-content: space-between;
+    }
+    &__block {        
+        max-width: 247px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-right: 98px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__img {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 38px;
+    }
+    &__title {
+        margin: 0 auto;
+        max-width: 197px;
+        color: #0d0d0d;
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 700;
+    }
+    &__descr {
+        margin-top: 28px;
+        color: #0d0d0d;
+        font-size: 14px;
+        line-height: 15px;
+        font-weight: 300;
+        a {
+            color: #ff0000;
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+    }
+
+}
