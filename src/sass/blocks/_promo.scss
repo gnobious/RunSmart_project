@@ -50,6 +50,10 @@
             color: #ffffff;
             text-transform: uppercase;
             text-decoration: underline;
+            transition: 0.4s all;
+            &:hover {
+                text-shadow: 0px 0px 10px  #ffffff;
+            }
         }
     }
 

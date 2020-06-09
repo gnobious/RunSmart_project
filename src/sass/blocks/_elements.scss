@@ -4,9 +4,11 @@
     line-height: 30px;
     font-weight: 700;    
     text-transform: uppercase;
+    text-align: center;
     &_white {
         color: #ffffff;
         font-size: 36px;
         line-height: 46px;
+        text-align: left;
     }
 }
