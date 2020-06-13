@@ -48,4 +48,70 @@ $(document).ready(function(){
             $('.overlay, #order').fadeIn('fast');
         })
     });
+
+    // Form validation
+    function validateForms(form){
+        $(form).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: {
+                    required: "Пожалуйста, введите своё имя",
+                    minlength: jQuery.validator.format("Минимальное количество символов - {0}")
+                },
+                phone: "Пожалуйста, введите свой телефон",
+                email: {
+                    required: "Нам необходим ваш e-mail, чтобы с вами связаться",
+                    email: "Ваш e-mail должен иметь формат name@domain.com"
+                }
+            }
+        });
+    };
+    validateForms('#consultation form');
+    validateForms('#order form');
+    validateForms('#consultation-form');
+
+    $('input[name=phone]').mask("+7 (999) 999-99-99");
+
+    $('form').submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url:"mailer/smart.php",
+            data: $(this).serialize( )
+        }).done(function() {
+            $(this).find("input").val("");
+            $('#consultation, #order').fadeOut();
+            $('.overlay, #thanks').fadeIn('slow');
+            $('form').trigger('reset');            
+        });
+        return false;
+    });
+
+    //smooth scroll and page up
+
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 1600) {
+            $('.pageup').fadeIn();
+        } else {
+            $('.pageup').fadeOut();
+        }
+    });
+
+    $("a[href=#up]").click(function(){
+        const _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+        return false;
+    });
+
+    new WOW().init();
 });
