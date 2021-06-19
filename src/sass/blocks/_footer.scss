@@ -56,9 +56,11 @@
             text-decoration: none  
         } 
         span {
-            font-size: 27px;
+            font-size: 27px;    
             color: #ffffff;
             transition: 0.4s all;
+            line-height: 49px;
+            width: 46px;
             &:hover {
                 font-size: 35px;
                 text-shadow: 0px 0px 10px #ffffff;

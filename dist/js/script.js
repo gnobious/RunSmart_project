@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+    // Slick Slider settings
     $('.carousel__inner').slick({
         speed: 1200,
         prevArrow: '<button type="button" class="slick-prev"><img src="icons/left.svg"></button>',
@@ -14,12 +16,14 @@ $(document).ready(function(){
         ]
     });
 
+    // Jquery Tabs Script
     $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
         $(this)
           .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
           .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
     });
 
+    // Jquery Toggle Slide script
     function toggleSlide(item) {
         $(item).each(function(i) {
             $(this).on('click', function(e) {
@@ -33,8 +37,7 @@ $(document).ready(function(){
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
 
-    // Modal
-
+    // Modal Forms
     $('[data-modal=consultation]').on('click', function() {
         $('.overlay, #consultation').fadeIn('fast');
     });
@@ -80,8 +83,10 @@ $(document).ready(function(){
     validateForms('#order form');
     validateForms('#consultation-form');
 
+    //Masked Input
     $('input[name=phone]').mask("+7 (999) 999-99-99");
 
+    //Sending Forms script
     $('form').submit(function(e) {
         e.preventDefault();
         $.ajax({
@@ -97,8 +102,7 @@ $(document).ready(function(){
         return false;
     });
 
-    //smooth scroll and page up
-
+    //Smooth Scroll and Page up button
     $(window).scroll(function(){
         if ($(this).scrollTop() > 1600) {
             $('.pageup').fadeIn();
@@ -113,5 +117,6 @@ $(document).ready(function(){
         return false;
     });
 
+    //WOW.js initialization
     new WOW().init();
 });
